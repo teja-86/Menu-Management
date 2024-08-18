@@ -12,7 +12,7 @@ Welcome to the Menu Management System repository! This application is built with
 - [API Endpoints](#api-endpoints)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
@@ -38,7 +38,7 @@ Before you begin, ensure you have met the following requirements:
 - **MongoDB Shell or MongoDB Atlas** installed and running
 - **Git** installed on your machine
 
-## Installation and Steps to run
+## Installation
 
 Follow these steps to set up the project locally:
 
@@ -55,10 +55,13 @@ Follow these steps to set up the project locally:
    ```bash
    PORT=5000
    MONGO_URI=your-mongodb-connection-string or localhost mongodb url
-4. **Start the development server:**
+   
+## Running the Application
+
+1. **Start the development server:**
    ```bash
    npm start
-5. **Access the application:**
+2. **Access the application:**
    Open your browser and navigate to
    ```bash
    http://localhost:5000
@@ -66,5 +69,46 @@ Follow these steps to set up the project locally:
 ## API Endpoints
 
 Here are the primary API endpoints for interacting with the Menu Management System:
+
+- **CREATE**
+- **Category - POST** `/api/categories/create`: Post the Categories.
+- **Sub Category - POST** `/api/categories/:categoryId/subcategories`: Post the Sub Categories.
+- **Item - POST** `/api/subcategories/:subCategoryId/items`: Post the Items.
+  
+- **GET**
+- **Category - GET** `/api/categories`: Get All Categories.
+- **Sub Category - GET** `/api/categories/:categoryId/subcategories`: Get All Sub Categories.
+- **Sub Category - GET** `/api/categories/:categoryId/subcategories/:idOrName`: Get All Sub Categories by name or id.
+- **Item - GET** `/api/subcategories/:subCategoryId/items`: Get All Items.
+- **Item - GET** `/api/subcategories/:subCategoryId/items/:idOrName`: Get All Items by name or id.
+
+- **EDIT**
+- **Category - PATCH** `/api/categories/:id`: Update the Categories.
+- **Sub Category - PATCH** `/api/categories/:categoryId/subcategories/:id`: Update the Sub Categories.
+- **Item - PATCH** `/api/subcategories/:subCategoryId/items/:id`: Update the Items.
+  
+- **SEARCH**
+- **Item - GET** `/api/items/search?name=YourItemName`: Search a Item by name.
+- **Item - GET** `/api/items/search?id=YourItemId`: Search a Item by id.
+
+> **Note:** Update the above endpoint paths to match your implementation.
+
+## Configuration
+
+You can customize the application's settings via the `.env` file:
+
+- `PORT`: The port number on which the server will run.
+- `MONGO_URI`: The database connection string or MongoDB localhost URL.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/YourFeature`.
+3. Make your changes and commit them: `git commit -m 'Add Your Feature'`.
+4. Push to the branch: `git push origin feature/YourFeature`.
+5. Open a Pull Request.
+
 
 
