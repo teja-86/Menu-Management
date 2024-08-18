@@ -20,6 +20,8 @@ app.use('/api/items', itemRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/categories/:categoryId/subcategories', subCategoryRoutes);
 app.use('/api/subcategories/:subCategoryId/items', itemRoutes);
+app.get('/', (req, res) => res.send('Welcome to the Menu Management'));
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
