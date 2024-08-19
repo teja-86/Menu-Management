@@ -10,6 +10,7 @@ Welcome to the Menu Management System repository! This application is built with
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
+- [Questions](#questions)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 
@@ -92,6 +93,29 @@ Here are the primary API endpoints for interacting with the Menu Management Syst
 - **Item - GET** `/api/items/search?id=YourItemId`: Search a Item by id.
 
 > **Note:** Update the above endpoint paths to match your implementation.
+
+## Questions 
+
+**1. Which database you have chosen and why?**
+
+I chose MongoDB because of its flexibility in handling unstructured data, its scalability for large datasets, and its ease of integration with Node.js, which was used in this project. MongoDB's document-based model aligns well with the JSON structure commonly used in modern web applications.
+
+**2. 3 things that you learned from this assignment?**
+
+Effective use of ES modules in a Node.js backend project for clean and modular code organization.
+
+Handling complex data relationships and queries in MongoDB, such as embedding and referencing data.
+
+The importance of detailed documentation and code comments to ensure clarity and maintainability for future developers.
+
+**3. What was the most difficult part of the assignment?**
+
+The most difficult part of the assignment was efficiently structuring the database to handle relationships between categories, subcategories, and items. Ensuring that the schema was both flexible for future changes and optimized for performance required careful consideration of how to store and retrieve nested data efficiently. Balancing these requirements while maintaining a clean and understandable codebase was particularly difficult.
+
+
+**4. What you would have done differently given more time?**
+
+Given more time, I would have implemented more comprehensive error handling and input validation to enhance the robustness of the application. Additionally, I would have optimized the database schema design to further improve query performance and reduce redundancy.
 
 ## Configuration
 
